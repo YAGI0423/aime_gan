@@ -5,10 +5,10 @@ from logitGateDataset.datasets import AndGate, OrGate, XorGate, NotGate
 
 def get_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='Argument Help')
-    parser.add_argument('--logit', type=str, default='XOR', choices=('AND', 'OR', 'XOR'))
+    parser.add_argument('--logit', type=str, default='XOR', choices=('AND', 'OR', 'XOR', 'NOT'))
     parser.add_argument('--input_size', type=int, default=2)
-    parser.add_argument('--dataset_size', type=int, default=12)
-    parser.add_argument('--batch_size', type=int, default=6)
+    parser.add_argument('--dataset_size', type=int, default=4)
+    parser.add_argument('--batch_size', type=int, default=1)
     return parser.parse_args()
 
 
@@ -31,7 +31,8 @@ if __name__ == '__main__':
 
     dataLoader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False)
 
-    x, y = next(iter(dataLoader))
-    print(x)
-
-    print(y)
+    print('\n')
+    print(f'< {args.logit} Dataset Sample >'.center(40, '='))
+    print(f'X'.center(9) + '   ' + f'Y'.center(6))
+    tuple(print(f'{x.numpy()}   {y.numpy()}') for x, y in dataLoader)
+    print('\n' + '=' * 40)
