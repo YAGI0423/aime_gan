@@ -58,8 +58,11 @@ dataLoader = DataLoader(dataset, batch_size=4, shuffle=False)
 
 
 ## 개발 환경
-**Language**: Python 3.9.12
+**Language**
 
+    + Python 3.9.12
+
+    
 **Library**
 
     + pytorch 1.12.0
