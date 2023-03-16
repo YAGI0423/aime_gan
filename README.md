@@ -38,7 +38,7 @@ $ python example.py
 ```
 <br>
 
-### Get Logit Dataset
+### Get Logiㅊ Dataset
 ```python
 from logicGateDataset.datasets import AndGate, OrGate, XorGate, NotGate
 
