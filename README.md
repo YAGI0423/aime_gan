@@ -61,6 +61,7 @@ dataLoader = DataLoader(dataset, batch_size=4, shuffle=False)
 **Language**: Python 3.9.12
 
 **Library**
+
     + pytorch 1.12.0
 
 <br><br>
