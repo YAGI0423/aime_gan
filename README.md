@@ -40,15 +40,16 @@ $ python example.py
 
 ### Get Logic Dataset
 ```python
+from torch.utils.data import DataLoader
 from logicGateDataset.datasets import AndGate, OrGate, XorGate, NotGate
 
 #Get AND Dataset
 #input_size: 입력 x의 개수, default=2
 #dataset_size: 데이터셋의 전체 크기
-dataset = AndGate(input_size=2, datset_size=100)
+dataset = AndGate(input_size=2, dataset_size=100)
 
 #Get XOR Dataset
-dataset = XorGate(input_size=2, datset_size=100)
+dataset = XorGate(input_size=2, dataset_size=100)
 
 #DataLoader
 dataLoader = DataLoader(dataset, batch_size=4, shuffle=False)
